@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Department Forms PnP Search Ext",
+    "id": "2e9fea34-5d8e-4cb9-a769-060d021e96c8",
+    "version": "4.1.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "mpnId": "",
+      "name": "PnP Team",
+      "termsOfUseUrl": "https://github.com/microsoft-search/pnp-modern-search/blob/main/LICENSE",
+      "privacyUrl": "",
+      "websiteUrl": "https://pnp.github.io/"
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/dept-forms-pnp-search-ext.sppkg"
+  }
+}
