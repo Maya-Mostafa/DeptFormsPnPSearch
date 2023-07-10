@@ -92,7 +92,7 @@ export function CustomComponent (props: ICustomComponentProps){
                     <IconButton title='Favorite' onClick={() => followDocHandler(page)} iconProps={{iconName : 'FavoriteStar'}} />
                 }
                 {page.FileType !== 'SharePoint.Link' &&
-                    <a className={styles.attachmentLinkDownload} href={`${page.Path}`} title='Download' download>
+                    <a className={styles.attachmentLinkDownload} href={`${page.DefaultEncodingURL}`} title='Download' download>
                         <Icon iconName='Download' />
                     </a>
                 } 
@@ -109,7 +109,7 @@ export function CustomComponent (props: ICustomComponentProps){
                     <TooltipHost content={`${page.FileType} file`}>
                         <Icon {...getFileTypeIconProps({extension: page.FileType, size: 16}) }/>
                     </TooltipHost> 
-                    <a className={styles.defautlLink + ' ' + styles.docLink} target="_blank" data-interception="off" href={page.Path}>{page.Title}</a>
+                    <a className={styles.defautlLink + ' ' + styles.docLink} target="_blank" data-interception="off" href={page.DefaultEncodingURL}>{page.Title}</a>
                 </>
             )
         },
@@ -180,7 +180,7 @@ export function CustomComponent (props: ICustomComponentProps){
                                             </div>
                                             <div className={styles.cellDiv}> 
                                                 {page.FileType !== 'SharePoint.Link' &&
-                                                    <a className={styles.attachmentLinkDownload} href={`${page.Path}`} title='Download' download>
+                                                    <a className={styles.attachmentLinkDownload} href={`${page.DefaultEncodingURL}`} title='Download' download>
                                                         <Icon iconName='Download' />
                                                     </a>
                                                 }                                             
@@ -193,7 +193,7 @@ export function CustomComponent (props: ICustomComponentProps){
                                                 <TooltipHost content={`${page.FileType} file`}>
                                                     <Icon {...getFileTypeIconProps({extension: page.FileType, size: 16}) }/>
                                                 </TooltipHost> 
-                                                <a className={styles.defautlLink + ' ' + styles.docLink} target="_blank" data-interception="off" href={page.Path}>{page.Title}</a>
+                                                <a className={styles.defautlLink + ' ' + styles.docLink} target="_blank" data-interception="off" href={page.DefaultEncodingURL}>{page.Title}</a>
                                             </div>
                                         </div>
                                     </td>
